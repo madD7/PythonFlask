@@ -1,0 +1,23 @@
+body{
+  /* background: grey;  */
+  /* Using an image from we as background. */
+  background: url(https://i.guim.co.uk/img/media/fccf2d648bd42dae41b65cad55925181506ec5e7/0_117_6016_3611/master/6016.jpg?width=465&quality=85&dpr=1&s=none);
+  background-repeat: no-repeat; /* If not used, image is tiled in entire page. */
+}
+
+p{
+  color: white;
+}
+
+div {
+  background: rgba(0, 200, 200, 0.2);
+  border: orange;
+  border-width: medium; /* Alternately, 4px , is also valid.*/
+  border-style: dotted;
+  /* border: red 5px dashed; */  /* Alternate method */
+}
+
+span{
+  background: red;
+  color: yellow;
+}
