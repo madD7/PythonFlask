@@ -2,19 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Forms Example</title>
+    <title>Forms & Labels Example</title>
   </head>
   <body>
-    <form >
-      <h1>Form 1</h1>
-      <h2>Log in</h2>
-      <p>Please input your Email ID. </p>
-      <input type="email" name="" value="">  <!-- Type of Input, Name for Value, Value passed back to backend. -->
+    <form action="HtmlAssignment.html" method='get'>
+      <!-- With Get method, the email-password values are passed to next page, HtmlAssignment in our example. -->
+      <h1>Log in page</h1>
+      <label for="emailTag">Email ID:</label>   <!-- for field must be same as id field of associated input -->
+      <!-- Type of Input, (variable) Name for the Value, Value passed back to backend. -->
       <!-- using type email, the browser performs check for email address ie. for '@' char in input -->
-      <p>Please input your Password. </p>
-      <input type="password" name="" value="">
-      <!-- For password, browser hides the characters. --> 
-      <p></p>
+      <!-- placeholder displays text that will be replaced once user starts entering the input. -->
+      <input id="emailTag" type="email" name="useremail" placeholder="User Email-id">
+      <br> <!-- Break line -->
+      <label for="pswdTag">Password:</label>
+      <input id="pswdTag" type="password" name="userpswd" placeholder="Password">
+      <!-- For password, browser hides the characters. -->
+      <br>
       <input type="submit" name="" value="Login">  <!-- Button is automatically created, when using submit. -->
     </form>
   </body>
