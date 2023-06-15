@@ -1,0 +1,16 @@
+h1{
+  color: blue;    /* Color name Example */
+}
+
+li{
+  /* For one property, semicolon is optional. */
+  color: rgb(50, 200, 20) /* rgb value example. 0-255*/
+}
+
+p{
+  color: #eab01c  /* hexadecimal values of rgb */
+}
+
+h4{
+  color: rgba(200, 50, 50, 0.4);  /* rgb with transparency. 0 to 1. 0 = transparent. */
+}
