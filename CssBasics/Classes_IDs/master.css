@@ -1,0 +1,35 @@
+h3{
+    font-family: sans-serif;
+}
+
+/* To refer to a class, use - .<className>*/
+.firstDiv{
+  color: white;
+  background: grey;
+}
+
+.secondDiv{
+  color: red;
+  background: cyan;
+  font-style: oblique;
+  font-family: cursive;
+  font-size: 25px;
+}
+
+/* To refer to a ID, use - #<IdName> */
+#standAlonePara{
+  color: green;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+/**/
+#extraPara{
+  /* Font family from fonts.google.com, linked in html file. */
+  font-family: 'Sacramento', cursive;
+  font-size: 40px;
+  font-style: italic;
+}
