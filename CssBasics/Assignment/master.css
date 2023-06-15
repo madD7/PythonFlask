@@ -1,0 +1,28 @@
+body{
+  background-color: lightgrey;
+  font-family: 'Aldrich', sans-serif;
+}
+
+h1{
+  text-align: center;
+  border: 2px solid black;
+}
+
+h2{
+  color: purple;
+}
+
+/* Alternatively, u can use anchor tag - a,
+since there is only one anchor tag. */
+#searchLink{
+  color: red;
+}
+
+
+.loginIn{
+  border: 5px darkblue solid;
+}
+
+#comments{
+  border: 4px grey solid;
+}
