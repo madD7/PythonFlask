@@ -5,6 +5,31 @@
     <title></title>
   </head>
   <body>
+    <form method="get">
+      <!-- Examples:  1. Linking Radio Buttons
+                      2. Drop-Down Menus
+                      3. Text inputs -->
+      <h3>Do you own a pet?</h3>
+      <!-- Both radio buttons share same name fieldvalue.
+      Hence they are connected. Means if you select one, other will be deselected. -->
+      <input id="yes" type="radio" name="petChoice" value="Yes">
+      <label for="yes">Yes</label>
+      <input id="no" type="radio" name="petChoice" value="No">
+      <label for="no">No</label>
 
+      <h3>What animal is your Pet?</h3>
+      <select name="animal">
+        <!-- Value = Value returned to backend.
+        Text between start and end tag = Text Displayed on Front End. -->
+        <option value="Dog">Doggo</option>
+        <option value="Cat">Catsy</option>
+        <option value="Rabbit">Bunny</option>
+        <option value="Fish">Fishi</option>
+      </select>
+      <p>Input Comments</p>
+      <textarea name="commentTxt" rows="2" cols="40"></textarea>
+      <br>
+      <input type="submit" name="submitBttn" value="Submit">
+    </form>
   </body>
 </html>
