@@ -6,17 +6,29 @@ from flask import Flask
 app = Flask(__name__)
 
 
+"""
+The string parameter that we pass into decorator,
+determines the url extension that will link to the function
+otherwise known as a view.
+"""
+
 @app.route('/')
 @app.route('/home')
 def index():
     """
-    The string parameter that we pass into decorator,
-    determines the url extension that will link to the function
-    otherwise known as a view.
-    :return: Html Header
+    :return: Html Header as string
     """
     return '<h1>Hello Puppy!</h1>'
 # End of index()
+
+
+@app.route('/info')
+def info():
+    """
+    :return: Html Header as String
+    """
+    return '<h1>Puppies are cute!</h1>'
+# End of info()
 
 
 if __name__ == "__main__":
