@@ -70,6 +70,24 @@ def owner_info():
 # End of hello_puppy()
 
 
+@app.route('/suggestPuppyNames/<name>')
+def name_suggestions(name):
+    """
+    Demonstrate passing a list
+    :param name: input variable. Puppy name.
+    :return: Html header as string with the variable value.
+
+    Note usage of {% <ControlFlow Statment> %} and {{variable_name}} in html file.
+
+    Also, adding this comment in html result to jinja error.
+        <!-- Note usage of {% <ControlFlow Statment> %} and {{variable_name}} -->
+    """
+    puppy_names = ['Tommy', 'Goldie', 'Sammy', 'Happy', 'Fluffy', 'Rufus']
+    return render_template('display_puppy_names.html',
+                           puppy_names=puppy_names, name=name)
+# End of hello_puppy()
+
+
 @app.route('/fault/<name>')
 def debug_error(name):
     """

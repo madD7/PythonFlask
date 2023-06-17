@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Some puppy name suggestions</h1>    <!-- Injecting the puppy_name variable from the python code. -->
+  <ul>
+    {% for puppies in puppy_names %}
+    <li>{{puppies}}</li>
+    {% endfor %}
+  </ul>
+  {% if name in puppy_names %}
+  <p>The name {{name}} is in the suggestions list</p>
+  {% else %}
+  <p>{{name}} is a new name.</p>
+  {% endif %}
+</body>
+</html>
