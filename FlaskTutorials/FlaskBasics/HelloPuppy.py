@@ -10,8 +10,9 @@ app = Flask(__name__)
 @app.route('/home')
 def index():
     """
-    Decorator links the return html (page) to the
-    route (url) of your application.
+    The string parameter that we pass into decorator,
+    determines the url extension that will link to the function
+    otherwise known as a view.
     :return: Html Header
     """
     return '<h1>Hello Puppy!</h1>'
