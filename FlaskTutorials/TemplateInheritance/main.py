@@ -24,6 +24,16 @@ other html files:
 
 {% endBlock %}
 
+
+To add url,
+use in anchor tag : 
+
+To link to a page/url, pass the python function name linked to the url path.
+<a href="{{ url_for('home') }}">Puppies Website</a>
+
+to add static file, viz. an image:
+<a href="{{ url_for('static', filename='puppy_pic.jpg') }}">Click Here</a>
+
 """
 
 
