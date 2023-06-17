@@ -23,7 +23,7 @@ def index():
     named 'templates', and then it's going to look inside that templates folder
     for a file name 'basic.html'.
     The puppy pic is rendered from the static folder, in the basic.html file.
-    :return: Html Header as string
+    :return: Rendered Html page
     """
     return render_template('basic.html') # Must match exactly with the filename
 # End of index()
@@ -33,12 +33,35 @@ def index():
 def hello_puppy(name):
     """
     Dynamic routing example.
+    Jinja templating lets us insert variables from our python
+    code to the html file. use {{<var_name>}} in the html file.
+    And pass the variable in the render template funtion
+    using syntax:
+    var_name_in_html = my_variable_to_pass.
+
+    often, we use same variable names for ease of read.
+    But, in this example, we demonstrate using different names.
+
+    :param name: input variable. Puppy name.
+    :return: Renderes Html header with variable from Python.
+    """
+    return render_template('puppy_name.html', puppy_name=name)
+# End of hello_puppy()
+
+
+@app.route('/puppy/ownerinfo')
+def owner_info():
+    """
+    Demonstrate passing a list
     :param name: input variable. Puppy name.
     :return: Html header as string with the variable value.
     """
-    return '<h1>Hello {0}!<br>This is Profile page of {0}.</h1>'.format(name)
-
-
+    owner_details = ['PuppyName','FirstName', 'LastName', 12345]
+    owner_dict = {'Address': 'House 1, Random Street, Some City, DreamLand',
+                  'Contact': 123456789}
+    return render_template('static_owner_info.html',
+                           owner_details=owner_details,
+                           owner_dict=owner_dict)
 # End of hello_puppy()
 
 

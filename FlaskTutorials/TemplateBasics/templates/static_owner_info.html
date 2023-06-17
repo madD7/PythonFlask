@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Hello {{owner_details[0]}}!</h1>    <!-- Injecting the puppy_name variable from the python code. -->
+  <h2>Owner Details</h2>
+  <p>First Name: {{owner_details[1]}}</p>
+  <p>Last Name: {{owner_details[2]}}</p>
+  <p>Puppy Tag No: {{owner_details[3]}}</p>
+  <ul>
+    <li>Address: {{owner_dict['Address']}}</li>
+    <li>Contact: {{owner_dict['Contact']}}</li>
+  </ul>
+</body>
+</html>
