@@ -29,7 +29,7 @@ other html files:
 
 @app.route('/')
 @app.route('/home')
-def index():
+def home():
     """
     Home page
     :return: Rendered Html page

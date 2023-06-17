@@ -8,7 +8,8 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Puppies Website</a>
+      <a class="navbar-brand" href="{{ url_for('home') }}">Puppies Website</a>
+      <!-- url_for('python_func_name') to link to the python function.  -->
   </nav>
 
   {% block content %}
