@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Welcome to Puppy Home Page</h1>
+  <p>Do you want to signup for our Puppy Band?</p>
+  <a href="{{ url_for('signup')}}">Sign Up for Band Auditions here!</a>
+</div>
+{% endblock %}
