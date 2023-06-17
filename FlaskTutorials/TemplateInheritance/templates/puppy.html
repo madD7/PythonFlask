@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<h1>Hello {{puppy_name}}!</h1>    <!-- Injecting the puppy_name variable from the python code. -->
+<h2>Welcome to Profile page of {{puppy_name | capitalize}}.</h2>
+<!-- Note the use of filter 'capitalize'. Filters are used to avoid changes in python code. -->
+{% endblock %}
