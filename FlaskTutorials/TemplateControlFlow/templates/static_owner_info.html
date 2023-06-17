@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Hello {{owner_details[0]}}!</h1>    <!-- Injecting the puppy_name variable from the python code. -->
+  <h2>Owner Details</h2>
+  <ul>
+    {% for i in owner_details %}       <!-- Using for loop to display items of the list -->
+    <li>{{i}}</li>
+    {% endfor %}                          <!-- This is important to denote end of for loop. -->
+  </ul>
+  <ul>
+    <li>Address: {{owner_dict['Address']}}</li>
+    <li>Contact: {{owner_dict['Contact']}}</li>
+  </ul>
+</body>
+</html>
+
