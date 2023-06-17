@@ -16,6 +16,13 @@ Dynamic routes have 2 Key aspects:
     
     Eg: route('/somePage/<name>')
     Name is passed to the decorated (linked) function. 
+    
+# Debugger - debug=True
+When enabling the debugger, a pin is printed (Eg: * Debugger PIN: 710-168-029) 
+    in the console where the script was executed. 
+You can copy the pin and paste in the WebPage Browser, 
+    when you click the console icon at the right corner of the error string 
+    to connect to the debugger console. 
 """
 
 @app.route('/')
@@ -39,6 +46,19 @@ def hello_puppy(name):
 # End of hello_puppy()
 
 
+@app.route('/fault/<name>')
+def debug_error(name):
+    """
+    To understand debugging.
+    The web page displays the Error with the Traceback.
+    :param name:
+    :return: Returns the 100th character of the name variable value,
+                basically generates an 'string out of range' error.
+    """
+    return '<h1>100th Letter of the Name is {}</h1>'.format(name[100])
+# End of debug_error()
+
+
 if __name__ == "__main__":
     # Runs on local server Port:5000
-    app.run()
+    app.run(debug=True)
