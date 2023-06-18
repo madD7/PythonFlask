@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>
+      {% if breed %}      <!-- Initial value of breed=False in the home().  -->
+        The breed of the pup is {{breed}}.
+        <br>
+        Update it in the form below.
+      {% else %}
+        Please enter the breed of pup:
+      {% endif %}
+    </p>
+    <form method="POST">  <!-- 'POST'/post' both are valid. -->
+      {{ form.hidden_tag() }}   <!-- csrf security -->
+      {{ form.pup_breed.label() }} {{ form.pup_breed() }}
+      {{ form.submit() }}
+    </form>
+</body>
+</html>

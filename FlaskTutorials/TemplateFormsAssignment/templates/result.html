@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Lets evaluate the username.</h1>
+  {% if conditions['isLower'] == True
+      and conditions['isUpper'] == True
+      and conditions['isNumeric'] == True %}
+  <p>The username successfully passed all the 3 requirements.</p>
+  {% else %}
+    <p>You have not entered username that satisfies the 3 requirements.</p>
+    <p>Requirements that username didnot pass: </p>
+    {% if conditions['isLower'] == False %}
+      <ul>
+        <li>username doesnot have a lower case character.</li>
+      </ul>
+    {% endif %}
+    {% if conditions['isUpper'] == False %}
+      <ul>
+        <li>username doesnot have a upper case character.</li>
+      </ul>
+    {% endif %}
+    {% if conditions['isNumeric'] == False %}
+      <ul>
+        <li>username doesnot end with a number.</li>
+      </ul>
+    {% endif %}
+  {% endif %} 
+</div>
+{% endblock %}
