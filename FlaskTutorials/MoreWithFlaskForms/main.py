@@ -2,7 +2,10 @@ from flask import (Flask, render_template,
                    session, redirect, url_for)
 from flask_wtf import FlaskForm  # Inherit class to create forms
 
-
+"""
+Flash messages - Quick messages to show to user.
+"""
+from flask import flash
 
 """
 Almost every HTML form field has a corresponding wtforms class.
@@ -89,6 +92,8 @@ def home():
         session['mood'] = form.mood.data
         session['food'] = form.food_choice.data
         session['feedback'] = form.feedback.data
+
+        flash("Thankyou for taking the Survey.")
 
         # when form is filled, redirect to 'thankyou' view.
         return redirect(url_for('thankyou'))
