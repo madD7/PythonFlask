@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Pup Survey</title>
 </head>
 <body>
-    <p>
-      {% if breed %}      <!-- Initial value of breed=False in the home().  -->
-        The breed of the pup is {{breed}}.
-        <br>
-        Update it in the form below.
-      {% else %}
-        Please enter the breed of pup:
-      {% endif %}
-    </p>
+  <h1>Welcome to Puppy Survey</h1>
     <form method="POST">  <!-- 'POST'/post' both are valid. -->
       {{ form.hidden_tag() }}   <!-- csrf security -->
       {{ form.pup_breed.label() }} {{ form.pup_breed() }}
+      <br>
+      {{ form.vaccinated.label() }} {{ form.vaccinated() }}
+      <br>
+      {{ form.food_choice.label() }} {{ form.food_choice() }}
+      <br>
+      {{ form.mood.label() }} {{ form.mood() }}
+      <br>
+      Any other Feedback?
+      <br>
+      {{ form.feedback() }}
+      <br>
       {{ form.submit() }}
     </form>
 </body>
