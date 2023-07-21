@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Did a puppy get adopted?</h1>
+    <p>If yes, fill the puppy id to remove entry from databse.</p>
+    <form method="post">
+        {{form.hidden_tag()}}
+        {{form.id.label}} {{form.id}}
+        {{form.submit()}}
+    </form>
+    <ul>
+        {% for pup in puppies %}
+        <li>{{pup}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
