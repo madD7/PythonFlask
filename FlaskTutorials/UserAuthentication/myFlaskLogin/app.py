@@ -35,6 +35,9 @@ def login():
                 next = url_for('welcome_user')
 
             return redirect(next)
+        else:
+            flash('Authentication failed. Wrong username or password.')
+
     return render_template('login.html', form=form)
 
 
